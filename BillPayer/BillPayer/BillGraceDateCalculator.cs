@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BillPayer
 {
-    public class Class1
+    public class BillGraceDateCalculator
     {
     }
 }

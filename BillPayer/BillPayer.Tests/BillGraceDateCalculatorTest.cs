@@ -12,6 +12,9 @@ namespace BillPayer.Tests {
     [Test]
     public void CalculateMortgageDate() {
       var subject = new BillGraceDateCalculator();
+
+      var dueDate = new DateTime(2017, 3, 16);
+      var result = subject.CalculateMortgageDate(dueDate);
     }
   }
 }
