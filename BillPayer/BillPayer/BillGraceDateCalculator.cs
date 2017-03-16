@@ -8,5 +8,8 @@ namespace BillPayer
 {
     public class BillGraceDateCalculator
     {
+      public object CalculateMortgageDate(DateTime dueDate) {
+        return null;
+      }
     }
 }
