@@ -9,6 +9,8 @@ namespace BillPayer
     public class BillGraceDateCalculator
     {
       public object CalculateMortgageDate(DateTime dueDate) {
+        if (dueDate.DayOfWeek == DayOfWeek.Sunday)
+          return dueDate.AddDays(1);
         return dueDate;
       }
     }
