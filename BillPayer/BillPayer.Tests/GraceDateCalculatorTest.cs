@@ -39,5 +39,14 @@ namespace BillPayer.Tests {
 
       Assert.That(result, Is.EqualTo(nextMonday));
     }
+
+    [Test]
+    public void CalculateWaterBillGraceDate_Returns_DueDate_When_DueDate_Is_A_Business_Day() {
+      var dueDate = new DateTime(2017, 3, 16);
+
+      var result = subject.CalculateWaterBillGraceDate(dueDate);
+
+      Assert.That(result, Is.EqualTo(dueDate));
+    }
   }
 }
