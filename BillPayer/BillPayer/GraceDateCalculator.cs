@@ -1,8 +1,8 @@
 ﻿using System;
 
 namespace BillPayer {
-  public class BillGraceDateCalculator {
-    public DateTime CalculateMortgageDate(DateTime dueDate) {
+  public class GraceDateCalculator {
+    public DateTime CalculateMortgageGraceDate(DateTime dueDate) {
       if (dueDate.DayOfWeek == DayOfWeek.Saturday)
         return dueDate.AddDays(2);
       if (dueDate.DayOfWeek == DayOfWeek.Sunday)
