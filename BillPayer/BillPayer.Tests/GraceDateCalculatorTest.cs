@@ -48,5 +48,15 @@ namespace BillPayer.Tests {
 
       Assert.That(result, Is.EqualTo(dueDate));
     }
+
+    [Test]
+    public void CalculateWaterBillGraceDate_Returns_Previous_Friday_When_DueDate_Is_A_Saturday() {
+      var dueDate = new DateTime(2017, 3, 18);
+      var previousFriday = new DateTime(2017, 3, 17);
+
+      var result = subject.CalculateWaterBillGraceDate(dueDate);
+
+      Assert.That(result, Is.EqualTo(previousFriday));
+    }
   }
 }

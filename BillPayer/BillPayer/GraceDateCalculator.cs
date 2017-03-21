@@ -10,5 +10,9 @@ namespace BillPayer {
 
       return dueDate;
     }
+
+    public DateTime CalculateWaterBillGraceDate(DateTime dueDate) {
+      return dueDate;
+    }
   }
 }
