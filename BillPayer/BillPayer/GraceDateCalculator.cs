@@ -3,10 +3,14 @@
 namespace BillPayer {
   public class GraceDateCalculator {
     public DateTime CalculateMortgageGraceDate(DateTime dueDate) {
+      return CalculateGraceDate(dueDate, 2, 1);
+    }
+
+    private static DateTime CalculateGraceDate(DateTime dueDate, int saturdayModifier, int sundayModifier) {
       if (dueDate.DayOfWeek == DayOfWeek.Saturday)
-        return dueDate.AddDays(2);
+        return dueDate.AddDays(saturdayModifier);
       if (dueDate.DayOfWeek == DayOfWeek.Sunday)
-        return dueDate.AddDays(1);
+        return dueDate.AddDays(sundayModifier);
 
       return dueDate;
     }
