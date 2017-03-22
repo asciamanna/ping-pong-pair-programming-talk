@@ -12,6 +12,8 @@ namespace BillPayer {
     }
 
     public DateTime CalculateWaterBillGraceDate(DateTime dueDate) {
+      if (dueDate.DayOfWeek == DayOfWeek.Saturday)
+        return dueDate.AddDays(-1);
       return dueDate;
     }
   }
